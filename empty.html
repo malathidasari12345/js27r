@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            float:left;
+            margin:10px;
+            height:500px;
+            width:500px;
+            /* border:1px solid black; */
+        }
+        .sty{
+            height:200px;
+            width:200px;
+            border:2px solid black;
+           margin-left:130px;
+          margin-top:50px;
+        }
+        .a{
+        height:130px;
+        width:130px;
+        border:1px solid black; 
+        margin-left: 20px;
+        }
+        .btn{
+           border:1px solid black;
+           border-radius:2px;
+           background-color:lightseagreen;
+           width:100px;
+           margin-left:100px;
+
+        }
+        .di{
+       
+        height:300px;
+        width:400px;
+        margin-left:100px;
+        margin-top:50px;
+   
+        }
+        .re{
+          margin-left:200px;
+            height:500px;
+        
+        }
+        .n1{
+            display:inline;
+        }
+        .n2{
+            margin-top:10px;
+            margin-left:20px;
+            height:30px;
+            width:50px;
+        }
+        .ids{
+            text-align: center;
+            font-size:20px;
+            color:blue;
+        }
+        .tit{
+            text-align: center;
+            font-size:20px;
+            color:crimson;
+        }
+        .desc{
+           font-size:15px;
+             }
+             .cat{
+                text-align: center;
+            font-size:20px;
+            color:blueviolet;
+             }
+    </style>
+</head>
+<body>
+ 
+    <span id="one"></span>
+    <span id="two"></span>
+    <script>
+        // for images
+        var o = document.getElementById("one")
+        var imgg=document.createElement("img")
+         localStorage.getItem("image");
+         imgg.setAttribute("src", localStorage.getItem("image"))
+         o.appendChild(imgg)
+         imgg.setAttribute("class","sty")
+            
+            // for br
+             var br=document.createElement("br")
+             o.appendChild(br);
+             var br1=document.createElement("br")
+             o.appendChild(br1);
+             var br2=document.createElement("br")
+            o.appendChild(br2);
+           
+
+          // for images replacing
+// img1
+var img1 = document.createElement("img");
+o.appendChild(img1);
+img1.setAttribute("src", "https://m.media-amazon.com/images/I/81zyK2duFoL._AC_UL640_FMwebp_QL65_.jpg");
+img1.setAttribute("class", "a");
+
+
+    img1.addEventListener("click", function() {
+    imgg.setAttribute("src", "https://m.media-amazon.com/images/I/81zyK2duFoL._AC_UL640_FMwebp_QL65_.jpg");
+    imgg.setAttribute("height", "200px");
+    imgg.setAttribute("width", "200px");
+});
+ 
+// img2
+var img2 = document.createElement("img");
+    o.appendChild(img2);
+    img2.setAttribute("src", "https://m.media-amazon.com/images/I/612wtQLapiL._AC_UL640_FMwebp_QL65_.jpg");
+    img2.setAttribute("class", "a");
+
+
+    img2.addEventListener("click", function t2() {
+    imgg.setAttribute("src", "https://m.media-amazon.com/images/I/612wtQLapiL._AC_UL640_FMwebp_QL65_.jpg");
+    imgg.setAttribute("height", "200px");
+    imgg.setAttribute("width", "200px");
+      
+    });
+
+    // for image3
+    var img3 = document.createElement("img");
+    o.appendChild(img3);
+    img3.setAttribute("src", "https://m.media-amazon.com/images/I/61s-3q6CYxL._AC_UL640_FMwebp_QL65_.jpg");
+    img3.setAttribute("class", "a");
+
+    img3.addEventListener("click",function t3() {
+    imgg.setAttribute("src","https://m.media-amazon.com/images/I/61s-3q6CYxL._AC_UL640_FMwebp_QL65_.jpg");
+    imgg.setAttribute("height", "200px");
+    imgg.setAttribute("width", "200px"); 
+
+    })
+       
+
+
+
+
+    // for second span
+    var s = document.getElementById("two")
+    var d = document.createElement("div")
+    d.setAttribute("class","di")
+    s.appendChild(d)
+
+    // for descrtiption div inside
+   
+    
+    
+   
+  
+// for id 
+    var id = document.createElement("h3");
+   id.innerText = "ID: " + JSON.parse(localStorage.getItem("id"));
+   d.appendChild(id)
+   id.setAttribute("class","ids")
+// for title
+   var ti = document.createElement("h3");
+   ti.innerText = "Title: " + JSON.parse(localStorage.getItem("title"));
+   d.appendChild(ti)
+   ti.setAttribute("class","tit")
+//    description
+   var des = document.createElement("h3");
+   des.innerText = "Description: " +  JSON.parse(localStorage.getItem("description"));
+   d.appendChild(des)
+   des.setAttribute("class","desc")
+// category
+   var cat = document.createElement("h3");
+   cat.innerText = "Category: " + JSON.parse(localStorage.getItem("category"));
+   d.appendChild(cat)
+   cat.setAttribute("class","cat")
+
+
+
+    var br=document.createElement("br")
+             s.appendChild(br);
+             var br1=document.createElement("br")
+             s.appendChild(br1);
+             var br2=document.createElement("br")
+            s.appendChild(br2);
+
+    var btn = document.createElement("button");
+        btn.setAttribute("class","btn");
+        btn.innerText="Buy Now";
+        s.appendChild(btn)
+        // event
+       var btn1= document.createElement("button");
+        btn1.setAttribute("class","btn");
+        btn1.innerText="Add to Cart";
+        s.appendChild(btn1)
+       
+
+
+
+
+       var br=document.createElement("br")
+             document.body.appendChild(br);
+             var br1=document.createElement("br")
+             document.body.appendChild(br1);
+             var br2=document.createElement("br")
+             document.body.appendChild(br2);
+             var br3=document.createElement("br")
+             document.body.appendChild(br3);
+             var br4=document.createElement("br")
+             document.body.appendChild(br4);
+             var br5=document.createElement("br")
+             document.body.appendChild(br5);
+             var br6=document.createElement("br")
+             document.body.appendChild(br6);
+             var br7=document.createElement("br")
+             document.body.appendChild(br7);
+             var br8=document.createElement("br")
+             document.body.appendChild(br8);
+             var br9=document.createElement("br")
+             document.body.appendChild(br9);
+             var br10=document.createElement("br")
+             document.body.appendChild(br10);
+             var br11=document.createElement("br")
+             document.body.appendChild(br11);
+             var br12=document.createElement("br")
+             document.body.appendChild(br12);
+             var br13=document.createElement("br")
+             document.body.appendChild(br13);
+             var br14=document.createElement("br")
+             document.body.appendChild(br14);
+             var br15=document.createElement("br")
+             document.body.appendChild(br15);
+             var br16=document.createElement("br")
+             document.body.appendChild(br16);
+             var br17=document.createElement("br")
+             document.body.appendChild(br17);
+             var br18=document.createElement("br")
+             document.body.appendChild(br18);
+             var br19=document.createElement("br")
+             document.body.appendChild(br19);
+             var br20=document.createElement("br")
+             document.body.appendChild(br20);
+             var br21=document.createElement("br")
+             document.body.appendChild(br21);
+             var br22=document.createElement("br")
+             document.body.appendChild(br22);
+             var br23=document.createElement("br")
+             document.body.appendChild(br23);
+             var br24=document.createElement("br")
+             document.body.appendChild(br24);
+             var br25=document.createElement("br")
+             document.body.appendChild(br25);
+             var br26=document.createElement("br")
+             document.body.appendChild(br26);
+             var br27=document.createElement("br")
+             document.body.appendChild(br27);
+             var br28=document.createElement("br")
+             document.body.appendChild(br28);
+             
+            
+             
+             
+    //    for reviews
+    var review = document.createElement("div")
+    document.body.appendChild(review)
+    var n=document.createElement("h2")
+    n.innerText="Reviews:"
+    review.appendChild(n);
+    n.style.color="green"
+    n.setAttribute("class","n1")
+    var i=document.createElement("img")
+review.appendChild(i);
+i.setAttribute("src", "data:image/jpeg;base64,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");
+i.setAttribute("class","n2")
+
+// for names and paragraphs:
+var n2=document.createElement("h5")
+review.appendChild(n2);
+n2.innerText="RAM"
+var p1=document.createElement("p")
+review.appendChild(p1);
+p1.innerText = "Value for money but with some compromise"
+
+var n3=document.createElement("h4")
+review.appendChild(n3);
+n3.innerText="Sandy Reddy"
+var p2=document.createElement("p")
+review.appendChild(p2);
+p2.innerText = "Firstly, i get my delivery but the product was broken but they will replace it and i got a new one that was nice and the clarity was great"
+
+var n4=document.createElement("h4")
+review.appendChild(n4);
+n4.innerText="lakshmi"
+var p3=document.createElement("p")
+review.appendChild(p3);
+p3.innerText = "Awesome 😎"
+
+    </script>
+</body>
+</html>
